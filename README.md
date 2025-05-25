@@ -24,7 +24,8 @@ dev-debugging-notes/
 ├── tools/                    # Helper scripts
 │   ├── add-issue.sh
 │   ├── search-issues.sh
-│   └── generate-toc.py
+│   ├── generate-toc.py
+│   └── update-stats.py
 └── templates/                # Issue templates
     ├── quick-fix.md
     └── detailed-guide.md
@@ -84,6 +85,67 @@ For complex problems requiring multiple steps, see `detailed-guides/`.
 Use the provided script:
 ```bash
 ./tools/add-issue.sh "VSCode Python PATH" "quick-reference/vscode.md"
+```
+
+## Tools
+
+The `tools/` directory contains helper scripts to manage and search through the debugging notes:
+
+### 1. add-issue.sh
+Adds new issues to the repository with proper formatting and metadata.
+```bash
+# Add a quick fix
+./tools/add-issue.sh "Issue Title" "quick-reference/category.md"
+
+# Add a detailed guide
+./tools/add-issue.sh "Issue Title" "detailed-guides/category/guide.md" --detailed
+
+# Options:
+#   --detailed    Create a detailed guide instead of a quick fix
+#   --platform    Specify platform (macos, windows, linux, all)
+#   --tags        Add custom tags (comma-separated)
+```
+
+### 2. search-issues.sh
+Searches through all issues using various criteria.
+```bash
+# Search by keyword
+./tools/search-issues.sh "memory leak"
+
+# Search by tag
+./tools/search-issues.sh --tag "performance"
+
+# Search by platform
+./tools/search-issues.sh --platform "macos"
+
+# Options:
+#   --tag         Filter by tag
+#   --platform    Filter by platform
+#   --type        Filter by type (quick-fix, detailed-guide)
+#   --category    Filter by category (e.g., database, deployment)
+```
+
+### 3. update-stats.py
+Updates the statistics in README.md based on current repository state.
+```bash
+# Update statistics
+python3 tools/update-stats.py
+
+# This will automatically update:
+# - Total number of issues
+# - Number of quick fixes
+# - Number of detailed guides
+# - Last updated date
+```
+
+### 4. generate-toc.py
+Generates a table of contents for markdown files (coming soon).
+```bash
+# Generate TOC for a specific file
+python3 tools/generate-toc.py path/to/file.md
+
+# Generate TOC for all files in a directory
+python3 tools/generate-toc.py path/to/directory/
 ```
 
 ## Statistics
