@@ -1,3 +1,51 @@
+<!-- TOC START -->
+## Table of Contents
+
+- [dev-debugging-notes](#dev-debugging-notes)
+  - [Repository Structure](#repository-structure)
+  - [Quick Search](#quick-search)
+  - [Categories](#categories)
+    - [VSCode](#vscode)
+    - [Git](#git)
+    - [Python/Conda](#pythonconda)
+    - [Node/NPM](#nodenpm)
+  - [Usage](#usage)
+    - [Quick Reference](#quick-reference)
+- [Search for a specific issue](#search-for-a-specific-issue)
+    - [Detailed Guides](#detailed-guides)
+    - [Adding New Issues](#adding-new-issues)
+  - [Tools](#tools)
+    - [1. add-issue.sh](#1-add-issuesh)
+- [Add a quick fix](#add-a-quick-fix)
+- [Add a detailed guide](#add-a-detailed-guide)
+- [Options:](#options)
+- [--detailed    Create a detailed guide instead of a quick fix](#detailed-create-a-detailed-guide-instead-of-a-quick-fix)
+- [--platform    Specify platform (macos, windows, linux, all)](#platform-specify-platform-macos-windows-linux-all)
+- [--tags        Add custom tags (comma-separated)](#tags-add-custom-tags-comma-separated)
+    - [2. search-issues.sh](#2-search-issuessh)
+- [Search by keyword](#search-by-keyword)
+- [Search by tag](#search-by-tag)
+- [Search by platform](#search-by-platform)
+- [Options:](#options)
+- [--tag         Filter by tag](#tag-filter-by-tag)
+- [--platform    Filter by platform](#platform-filter-by-platform)
+- [--type        Filter by type (quick-fix, detailed-guide)](#type-filter-by-type-quick-fix-detailed-guide)
+- [--category    Filter by category (e.g., database, deployment)](#category-filter-by-category-eg-database-deployment)
+    - [3. update-stats.py](#3-update-statspy)
+- [Update statistics](#update-statistics)
+- [This will automatically update:](#this-will-automatically-update)
+- [- Total number of issues](#total-number-of-issues)
+- [- Number of quick fixes](#number-of-quick-fixes)
+- [- Number of detailed guides](#number-of-detailed-guides)
+- [- Last updated date](#last-updated-date)
+    - [4. generate-toc.py](#4-generate-tocpy)
+- [Generate TOC for a specific file](#generate-toc-for-a-specific-file)
+- [Generate TOC for all files in a directory](#generate-toc-for-all-files-in-a-directory)
+  - [Statistics](#statistics)
+  - [Tags](#tags)
+
+<!-- TOC END -->
+
 # dev-debugging-notes
 
 A comprehensive collection of common development debugging issues and their solutions.
@@ -167,5 +215,5 @@ Issues are tagged for easy filtering:
 - `#performance` - Speed, memory, optimization issues
 
 ---
-
+`
 **Tip:** Use `Cmd+F` (or `Ctrl+F`) to search within this README, or use the search scripts in `tools/` for repo-wide searches.
