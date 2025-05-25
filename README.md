@@ -88,9 +88,9 @@ Use the provided script:
 
 ## Statistics
 
-- **Total Issues:** 8
+- **Total Issues:** 36
 - **Quick Fixes:** 8
-- **Detailed Guides:** 0
+- **Detailed Guides:** 28
 - **Last Updated:** 2025-05-25
 
 ## Tags
